@@ -1,0 +1,1 @@
+console.log("ICCK website loaded successfully");
