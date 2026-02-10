@@ -1,3 +1,9 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  background-color: #fffbea; /* or your chosen background */
+}
 /* Global Reset */
 * {
   margin: 0;
@@ -7,11 +13,15 @@
 }
 
 /* Body */
-body {
-  background-color: #ffffff;
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  background-color: #fff3b0; /* soft yellow – adjust if you want */
   color: #333;
   line-height: 1.6;
 }
+
 
 /* Header */
 header {
@@ -131,6 +141,11 @@ footer {
 @media (max-width: 768px) {
   header h1 {
     font-size: 1.2rem;
+    @media (max-width: 768px) {
+  body {
+    background-color: #fffbea;
+  }
+}
   }
 
   main {
