@@ -1,48 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Give / Donate - ICCK Tampere</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=7" />
+  <!-- QRCode.js library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+  <style>
+    /* Donate Page Styling */
+    .donate-page {
+      max-width: 600px;
+      margin: 2rem auto;
+      padding: 1rem 1.5rem;
+      background-color: #fffbea; /* soft yellow */
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .donate-page h2 {
+      color: #FFD700;
+      margin-bottom: 1rem;
+    }
+
+    .donate-page p {
+      margin: 0.8rem 0;
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #333;
+    }
+
+    #qrcode {
+      margin: 20px auto;
+      max-width: 250px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #FFD700;
+      color: black;
+      padding: 12px 24px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      margin-top: 20px;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #e6c200;
+    }
+
+    @media (max-width: 600px) {
+      .donate-page {
+        margin: 1rem;
+        padding: 1rem;
+      }
+
+      #qrcode {
+        width: 200px !important;
+        height: 200px !important;
+      }
+    }
+  </style>
 </head>
 <body>
 
 <header>
-  <div class="header-container">
-    <h1>International Congregation of Christ the King</h1>
-    <p>Tampere, Finland</p>
+  <h1>International Congregation of Christ the King</h1>
+  <p>Tampere, Finland</p>
 
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="sermons.html">Sermons</a>
-      <a href="events.html">Events</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="donate.html" class="active">Give / Donate</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="sermons.html">Sermons</a>
+    <a href="events.html">Events</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 </header>
 
 <main>
-  <section class="donate-landing">
+  <section class="donate-page">
     <h2>Give / Donate</h2>
-    <p>Your generosity helps support ICCK Tampere’s services, events, and community programs.</p>
+    <p>Thank you for supporting ICCK Tampere’s services, events, and community programs!</p>
 
+    <h3>1. Scan the QR Code</h3>
+    <div id="qrcode"></div>
+
+    <h3>2. Use MobilePay Number</h3>
     <p><strong>MobilePay Number:</strong> 14585</p>
-    <p>Use this number to donate via MobilePay or scan the QR code below:</p>
+    <p>Use this number for all service offerings and donations.</p>
 
-    <!-- QR Code Image -->
-    <img src="assets/images/mobilepay_qr.jpg" alt="MobilePay QR Code" style="max-width:250px; margin:20px auto; display:block; border:2px solid #FFD700; border-radius:8px;">
-
-    <p style="font-size:0.9rem; color:#555;">Scan the QR code with your MobilePay app, or use the number above to donate manually.</p>
+    <a href="index.html" class="btn">Back to Home</a>
   </section>
 </main>
 
 <footer>
-  <p>© ICCK Tampere - All Rights Reserved</p>
+  <p>© ICCK Tampere — All Rights Reserved</p>
 </footer>
+
+<!-- Dynamic QR Code JS -->
+<script>
+  // MobilePay number
+  var mobilePayNumber = "14585";
+
+  // Generate QR code dynamically
+  var qrcode = new QRCode(document.getElementById("qrcode"), {
+    text: "mobilepay://pay?recipient=" + mobilePayNumber,
+    width: 250,
+    height: 250,
+    colorDark: "#000000",
+    colorLight: "#fffbea", // matches page background
+    correctLevel: QRCode.CorrectLevel.H
+  });
+</script>
 
 </body>
 </html>
