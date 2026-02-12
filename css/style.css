@@ -191,3 +191,62 @@ footer {
     height: auto;
   }
 }
+/* ==========================
+   Donate Section
+========================== */
+.donate {
+  background-color: #fffbea; /* soft cream background */
+  text-align: center;
+  padding: 2rem 1rem;
+  border: 2px solid #FFD700; /* subtle gold border */
+  border-radius: 10px;
+  margin: 2rem auto;
+  max-width: 600px;
+}
+
+.donate h2 {
+  color: #FFD700;
+  margin-bottom: 1rem;
+}
+
+.donate p {
+  margin: 0.5rem 0;
+}
+
+.donate img {
+  max-width: 200px;
+  margin: 1rem auto;
+}
+
+.donate .btn {
+  background-color: #FFD700;
+  color: black;
+  padding: 12px 25px;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.donate .btn:hover {
+  background-color: #e6c200;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .donate {
+    padding: 1.5rem 1rem;
+    margin: 1.5rem auto;
+  }
+
+  .donate h2 {
+    font-size: 1.4rem;
+  }
+
+  .donate .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+

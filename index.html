@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ICCK Tampere</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <!-- Versioned CSS to prevent caching -->
+  <link rel="stylesheet" href="css/style.css?v=4" />
 </head>
 <body>
 
@@ -13,11 +14,12 @@
   <p>Tampere, Finland</p>
 
   <nav>
-    <a href="index.html">Home</a>
+    <a href="index.html" class="active">Home</a>
     <a href="about.html">About</a>
     <a href="sermons.html">Sermons</a>
     <a href="events.html">Events</a>
     <a href="gallery.html">Gallery</a>
+    <a href="donate.html">Give / Donate</a>
     <a href="contact.html">Contact</a>
   </nav>
 </header>
@@ -30,9 +32,12 @@
       fellowship, prayer, and service.
     </p>
 
-    <p><strong>Service Times:</strong> Sundays at 11:00 AM</p>
+    <!-- Updated Service Time and Sunday School info -->
+    <p><strong>Service Times:</strong> Sundays at 4:00 PM</p>
+    <p><strong>Sunday School:</strong> Available for children during all services unless announced otherwise.</p>
 
-    <a href="#" class="btn">Give / Donate</a>
+    <!-- Give / Donate Button -->
+    <a href="donate.html" class="btn">Give / Donate</a>
   </section>
 </main>
 
@@ -40,5 +45,7 @@
   <p>© ICCK Tampere — All Rights Reserved</p>
 </footer>
 
+<!-- Versioned JS to prevent caching -->
+<script src="js/main.js?v=3"></script>
 </body>
 </html>
