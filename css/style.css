@@ -175,9 +175,9 @@ footer {
   }
 
   /* Force background for all major elements */
-  html, body, header, main, section, footer {
-    background-color: #fff3b0 !important;
-  }
+  html, body {
+  background-color: #fff3b0;
+}
 
   /* Mobile gallery: single column to prevent collapse */
   .gallery-grid {
